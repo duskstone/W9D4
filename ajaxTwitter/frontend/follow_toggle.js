@@ -18,4 +18,20 @@ FollowToggle.prototype.render = function() { //text here refers to button or do 
   };
 };
 
+FollowToggle.prototype.handleClick = function () {
+  $.ajax({
+    // e.presentdefault
+    // 
+    if (this.followState === 'followed') {  
+      type: 'DELETE',
+      url: '/users/:id/follow',
+    } else {
+      type: 'POST',
+      url: '/users/:id/follow',
+    };
+  }) 
+};
+
+
+
 module.exports = FollowToggle
